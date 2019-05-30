@@ -11,7 +11,7 @@ GAMMA = 0.9  # Forgetting.
 TUNING = False  # If False, just use arbitrary, pre-selected params.
 TRAIN_FRAMES = 100000 # to train for 100K frames in total
 
-def train_net(model, params, weights, path, trainFrames, i):
+def train_net(model, params, weights, path, trainFrames):
 
     filename = params_to_filename(params)
 
@@ -190,7 +190,7 @@ def launch_learn(params):
     else:
         print("Already tested.")
 
-def IRL_helper(weights, path, trainFrames, i):
+def IRL_helper(weights, path, trainFrames):
     nn_param = [164, 150]
     params = {
         "batchSize": 100,
